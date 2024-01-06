@@ -1,0 +1,17 @@
+
+.container{
+    margin: 0 auto;
+    max-width: 400px;
+    margin-top: 10%;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+}
+.login-header{
+    text-align: center;
+}
+.form-item{
+    margin: 5px;
+
+}
