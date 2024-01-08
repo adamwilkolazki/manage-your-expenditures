@@ -1,6 +1,7 @@
 package com.example.manageyourexpenditures.config;
 
 
+import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -17,13 +18,16 @@ public class SecurityConfig {
             requests -> requests
 
                     .requestMatchers("login","/register","/confirmation").permitAll()
+                    .requestMatchers(PathRequest.toH2Console()).permitAll()
 
                     .requestMatchers("/main.css").permitAll()
+
 
                     .anyRequest().authenticated());
 
     http.formLogin(login -> login.loginPage("/login").permitAll());
     http.csrf().disable();
+    http.headers().frameOptions().sameOrigin();
 
     return http.build();
 

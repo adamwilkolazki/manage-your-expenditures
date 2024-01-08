@@ -1,3 +1,260 @@
 2024-01-02 20:30:17.122398+01:00 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
 The object is already closed [90007-224]
+2024-01-08 16:17:10.100256+01:00 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure(\000d\000a                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a                                        description VARCHAR(200) NOT NULL,\000d\000a                                        [*]value DECIMAL NOT NULL ,\000d\000a                                        category VARCHAR(30) NOT NULL,\000d\000a                                        user_id BIGINT,\000d\000a                                        FOREIGN KEY (user_id) REFERENCES application_user (id)\000d\000a)"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure(\000d\000a                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a                                        description VARCHAR(200) NOT NULL,\000d\000a                                        [*]value DECIMAL NOT NULL ,\000d\000a                                        category VARCHAR(30) NOT NULL,\000d\000a                                        user_id BIGINT,\000d\000a                                        FOREIGN KEY (user_id) REFERENCES application_user (id)\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure(
+                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                                        description VARCHAR(200) NOT NULL,
+                                        value DECIMAL NOT NULL ,
+                                        category VARCHAR(30) NOT NULL,
+                                        user_id BIGINT,
+                                        FOREIGN KEY (user_id) REFERENCES application_user (id)
+) [42001-224]
+2024-01-08 16:23:24.160308+01:00 jdbc[15]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure(\000d\000a                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a                                        description VARCHAR(200) NOT NULL,\000d\000a                                        [*]value DECIMAL NOT NULL,\000d\000a                                        category VARCHAR(30) NOT NULL,\000d\000a                                        user_id BIGINT,\000d\000a                                        FOREIGN KEY (user_id) REFERENCES application_user (id)\000d\000a)"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure(\000d\000a                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a                                        description VARCHAR(200) NOT NULL,\000d\000a                                        [*]value DECIMAL NOT NULL,\000d\000a                                        category VARCHAR(30) NOT NULL,\000d\000a                                        user_id BIGINT,\000d\000a                                        FOREIGN KEY (user_id) REFERENCES application_user (id)\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure(
+                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                                        description VARCHAR(200) NOT NULL,
+                                        value DECIMAL NOT NULL,
+                                        category VARCHAR(30) NOT NULL,
+                                        user_id BIGINT,
+                                        FOREIGN KEY (user_id) REFERENCES application_user (id)
+) [42001-224]
+2024-01-08 16:31:36.018144+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure(\000d\000a                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a                                        description VARCHAR(200) NOT NULL,\000d\000a                                        [*]value DECIMAL NOT NULL,\000d\000a                                        category VARCHAR(30) NOT NULL,\000d\000a                                        user_id BIGINT,\000d\000a                                        FOREIGN KEY (user_id) REFERENCES application_user (id)\000d\000a)"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure(\000d\000a                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a                                        description VARCHAR(200) NOT NULL,\000d\000a                                        [*]value DECIMAL NOT NULL,\000d\000a                                        category VARCHAR(30) NOT NULL,\000d\000a                                        user_id BIGINT,\000d\000a                                        FOREIGN KEY (user_id) REFERENCES application_user (id)\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure(
+                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                                        description VARCHAR(200) NOT NULL,
+                                        value DECIMAL NOT NULL,
+                                        category VARCHAR(30) NOT NULL,
+                                        user_id BIGINT,
+                                        FOREIGN KEY (user_id) REFERENCES application_user (id)
+) [42001-224]
+2024-01-08 16:32:10.659567+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure(\000d\000a                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a                                        description VARCHAR(200) NOT NULL,\000d\000a                                        [*]value DECIMAL NOT NULL,\000d\000a                                        category VARCHAR(30) NOT NULL,\000d\000a                                       )\000d\000a)"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure(\000d\000a                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a                                        description VARCHAR(200) NOT NULL,\000d\000a                                        [*]value DECIMAL NOT NULL,\000d\000a                                        category VARCHAR(30) NOT NULL,\000d\000a                                       )\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure(
+                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                                        description VARCHAR(200) NOT NULL,
+                                        value DECIMAL NOT NULL,
+                                        category VARCHAR(30) NOT NULL,
+                                       )
+) [42001-224]
+2024-01-08 16:32:42.924334+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure(\000d\000a                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a                                        description VARCHAR(200) NOT NULL,\000d\000a                                        [*]value DECIMAL NOT NULL,\000d\000a                                        category VARCHAR(30) NOT NULL,\000d\000a                                        user_id BIGINT,\000d\000a                                        FOREIGN KEY (user_id) REFERENCES application_user (id))"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure(\000d\000a                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a                                        description VARCHAR(200) NOT NULL,\000d\000a                                        [*]value DECIMAL NOT NULL,\000d\000a                                        category VARCHAR(30) NOT NULL,\000d\000a                                        user_id BIGINT,\000d\000a                                        FOREIGN KEY (user_id) REFERENCES application_user (id))"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure(
+                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                                        description VARCHAR(200) NOT NULL,
+                                        value DECIMAL NOT NULL,
+                                        category VARCHAR(30) NOT NULL,
+                                        user_id BIGINT,
+                                        FOREIGN KEY (user_id) REFERENCES application_user (id)) [42001-224]
+2024-01-08 16:33:08.431457+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure(\000d\000a                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a                                        description VARCHAR(200) NOT NULL,\000d\000a                                        [*]value  BIGINT NOT NULL,\000d\000a                                        category VARCHAR(30) NOT NULL,\000d\000a                                        user_id BIGINT,\000d\000a                                        FOREIGN KEY (user_id) REFERENCES application_user (id))"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure(\000d\000a                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,\000d\000a                                        description VARCHAR(200) NOT NULL,\000d\000a                                        [*]value  BIGINT NOT NULL,\000d\000a                                        category VARCHAR(30) NOT NULL,\000d\000a                                        user_id BIGINT,\000d\000a                                        FOREIGN KEY (user_id) REFERENCES application_user (id))"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure(
+                                        id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+                                        description VARCHAR(200) NOT NULL,
+                                        value  BIGINT NOT NULL,
+                                        category VARCHAR(30) NOT NULL,
+                                        user_id BIGINT,
+                                        FOREIGN KEY (user_id) REFERENCES application_user (id)) [42001-224]
+2024-01-08 16:36:05.670246+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure(\000d\000aid BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,\000d\000adescription VARCHAR(100),\000d\000a[*]value DECIMAL,\000d\000acategory VARCHAR(30))\000d\000a\000d\000a\000d\000a\000d\000a\000d\000a)"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure(\000d\000aid BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,\000d\000adescription VARCHAR(100),\000d\000a[*]value DECIMAL,\000d\000acategory VARCHAR(30))\000d\000a\000d\000a\000d\000a\000d\000a\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure(
+id BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+description VARCHAR(100),
+value DECIMAL,
+category VARCHAR(30))
+
+
+
+
+) [42001-224]
+2024-01-08 16:36:22.590521+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure(\000d\000aid BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,\000d\000adescription VARCHAR(100),\000d\000a[*]value DECIMAL,\000d\000acategory VARCHAR(30))"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure(\000d\000aid BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,\000d\000adescription VARCHAR(100),\000d\000a[*]value DECIMAL,\000d\000acategory VARCHAR(30))"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure(
+id BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+description VARCHAR(100),
+value DECIMAL,
+category VARCHAR(30)) [42001-224]
+2024-01-08 16:36:22.591506+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2024-01-08 16:36:29.951104+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure(\000d\000aid BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,\000d\000adescription VARCHAR(100),\000d\000a[*]value DECIMAL,\000d\000acategory VARCHAR(30))"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure(\000d\000aid BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,\000d\000adescription VARCHAR(100),\000d\000a[*]value DECIMAL,\000d\000acategory VARCHAR(30))"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure(
+id BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+description VARCHAR(100),
+value DECIMAL,
+category VARCHAR(30)) [42001-224]
+2024-01-08 16:36:29.953109+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2024-01-08 16:36:30.947115+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure(\000d\000aid BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,\000d\000adescription VARCHAR(100),\000d\000a[*]value DECIMAL,\000d\000acategory VARCHAR(30))"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure(\000d\000aid BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,\000d\000adescription VARCHAR(100),\000d\000a[*]value DECIMAL,\000d\000acategory VARCHAR(30))"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure(
+id BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+description VARCHAR(100),
+value DECIMAL,
+category VARCHAR(30)) [42001-224]
+2024-01-08 16:36:30.948111+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "[*])"
+Syntax error in SQL statement "[*])"; SQL statement:
+) [42000-224]
+2024-01-08 16:36:55.715939+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure(\000d\000aid BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,\000d\000adescription VARCHAR(100) NOT NULL,\000d\000a[*]value DECIMAL NOT NULL,\000d\000acategory VARCHAR(30) NOT NULL)\000d\000a\000d\000a\000d\000a\000d\000a\000d\000a)"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure(\000d\000aid BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,\000d\000adescription VARCHAR(100) NOT NULL,\000d\000a[*]value DECIMAL NOT NULL,\000d\000acategory VARCHAR(30) NOT NULL)\000d\000a\000d\000a\000d\000a\000d\000a\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure(
+id BIGINT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+description VARCHAR(100) NOT NULL,
+value DECIMAL NOT NULL,
+category VARCHAR(30) NOT NULL)
+
+
+
+
+) [42001-224]
+2024-01-08 16:44:26.624371+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a                                           id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a                                           description VARCHAR(250) NOT NULL,\000d\000a                                           [*]value DECIMAL NOT NULL ,\000d\000a                                           category VARCHAR(50) NOT NULL ,\000d\000a                                           date DATE NOT NULL ,\000d\000a                                           user_id BIGINT,\000d\000a                                           FOREIGN KEY (user_id) REFERENCES application_user (id))\000d\000a\000d\000a\000d\000a\000d\000a)"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a                                           id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a                                           description VARCHAR(250) NOT NULL,\000d\000a                                           [*]value DECIMAL NOT NULL ,\000d\000a                                           category VARCHAR(50) NOT NULL ,\000d\000a                                           date DATE NOT NULL ,\000d\000a                                           user_id BIGINT,\000d\000a                                           FOREIGN KEY (user_id) REFERENCES application_user (id))\000d\000a\000d\000a\000d\000a\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure (
+                                           id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+                                           description VARCHAR(250) NOT NULL,
+                                           value DECIMAL NOT NULL ,
+                                           category VARCHAR(50) NOT NULL ,
+                                           date DATE NOT NULL ,
+                                           user_id BIGINT,
+                                           FOREIGN KEY (user_id) REFERENCES application_user (id))
+
+
+
+) [42001-224]
+2024-01-08 16:44:34.785061+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a                                           id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a                                           description VARCHAR(250) NOT NULL,\000d\000a                                           [*]value DECIMAL NOT NULL ,\000d\000a                                           category VARCHAR(50) NOT NULL ,\000d\000a                                           date DATE NOT NULL ,\000d\000a                                           )\000d\000a\000d\000a\000d\000a\000d\000a)"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a                                           id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a                                           description VARCHAR(250) NOT NULL,\000d\000a                                           [*]value DECIMAL NOT NULL ,\000d\000a                                           category VARCHAR(50) NOT NULL ,\000d\000a                                           date DATE NOT NULL ,\000d\000a                                           )\000d\000a\000d\000a\000d\000a\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure (
+                                           id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+                                           description VARCHAR(250) NOT NULL,
+                                           value DECIMAL NOT NULL ,
+                                           category VARCHAR(50) NOT NULL ,
+                                           date DATE NOT NULL ,
+                                           )
+
+
+
+) [42001-224]
+2024-01-08 16:44:43.170953+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a                                           id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a                                           description VARCHAR(250) NOT NULL,\000d\000a                                           sum DECIMAL NOT NULL ,\000d\000a                                           category VARCHAR(50) NOT NULL ,\000d\000a                                           date DATE NOT NULL ,\000d\000a                                           [*])\000d\000a\000d\000a\000d\000a\000d\000a)"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a                                           id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a                                           description VARCHAR(250) NOT NULL,\000d\000a                                           sum DECIMAL NOT NULL ,\000d\000a                                           category VARCHAR(50) NOT NULL ,\000d\000a                                           date DATE NOT NULL ,\000d\000a                                           [*])\000d\000a\000d\000a\000d\000a\000d\000a)"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure (
+                                           id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+                                           description VARCHAR(250) NOT NULL,
+                                           sum DECIMAL NOT NULL ,
+                                           category VARCHAR(50) NOT NULL ,
+                                           date DATE NOT NULL ,
+                                           )
+
+
+
+) [42001-224]
+2024-01-08 16:47:25.522333+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000a[*]value DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL,\000d\000aapplication_user_id BIGINT,\000d\000aFOREIGN KEY (application_user_id) REFERENCES application_user (id)\000d\000a )"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000a[*]value DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL,\000d\000aapplication_user_id BIGINT,\000d\000aFOREIGN KEY (application_user_id) REFERENCES application_user (id)\000d\000a )"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure (
+ id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ description VARCHAR(250) NOT NULL,
+value DECIMAL NOT NULL ,
+ category VARCHAR(30) NOT NULL ,
+ date DATE NOT NULL,
+application_user_id BIGINT,
+FOREIGN KEY (application_user_id) REFERENCES application_user (id)
+ ) [42001-224]
+2024-01-08 16:47:38.816237+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000a[*]value DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a\000d\000a )"; oczekiwano "identifier"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000a[*]value DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a\000d\000a )"; expected "identifier"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure (
+ id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ description VARCHAR(250) NOT NULL,
+value DECIMAL NOT NULL ,
+ category VARCHAR(30) NOT NULL ,
+ date DATE NOT NULL
+
+ ) [42001-224]
+2024-01-08 16:48:09.719636+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000asum DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a[*]application_user_id BIGINT,\000d\000aFOREIGN KEY (application_user_id) REFERENCES application_user (id))"; oczekiwano "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000asum DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a[*]application_user_id BIGINT,\000d\000aFOREIGN KEY (application_user_id) REFERENCES application_user (id))"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure (
+ id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ description VARCHAR(250) NOT NULL,
+sum DECIMAL NOT NULL ,
+ category VARCHAR(30) NOT NULL ,
+ date DATE NOT NULL
+application_user_id BIGINT,
+FOREIGN KEY (application_user_id) REFERENCES application_user (id)) [42001-224]
+2024-01-08 16:49:37.742457+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000asum DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a[*]application_user_id BIGINT,\000d\000aFOREIGN KEY (application_user_id) REFERENCES application_user (id))"; oczekiwano "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000asum DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a[*]application_user_id BIGINT,\000d\000aFOREIGN KEY (application_user_id) REFERENCES application_user (id))"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure (
+ id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ description VARCHAR(250) NOT NULL,
+sum DECIMAL NOT NULL ,
+ category VARCHAR(30) NOT NULL ,
+ date DATE NOT NULL
+application_user_id BIGINT,
+FOREIGN KEY (application_user_id) REFERENCES application_user (id)) [42001-224]
+2024-01-08 16:51:15.358604+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000asum DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a[*]application_user_id BIGINT,\000d\000aFOREIGN KEY (application_user_id) REFERENCES application_user (id))"; oczekiwano "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000asum DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a[*]application_user_id BIGINT,\000d\000aFOREIGN KEY (application_user_id) REFERENCES application_user (id))"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure (
+ id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ description VARCHAR(250) NOT NULL,
+sum DECIMAL NOT NULL ,
+ category VARCHAR(30) NOT NULL ,
+ date DATE NOT NULL
+application_user_id BIGINT,
+FOREIGN KEY (application_user_id) REFERENCES application_user (id)) [42001-224]
+2024-01-08 16:52:29.081356+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000asum DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a[*]application_user_id BIGINT,\000d\000aFOREIGN KEY (klucz) REFERENCES application_user (id))"; oczekiwano "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000asum DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a[*]application_user_id BIGINT,\000d\000aFOREIGN KEY (klucz) REFERENCES application_user (id))"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure (
+ id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ description VARCHAR(250) NOT NULL,
+sum DECIMAL NOT NULL ,
+ category VARCHAR(30) NOT NULL ,
+ date DATE NOT NULL
+application_user_id BIGINT,
+FOREIGN KEY (klucz) REFERENCES application_user (id)) [42001-224]
+2024-01-08 16:52:57.316040+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000asum DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a[*]application_user_id BIGINT,\000d\000aFOREIGN KEY (application_user_id) REFERENCES APPLICATION_USER  (ID))"; oczekiwano "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000asum DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a[*]application_user_id BIGINT,\000d\000aFOREIGN KEY (application_user_id) REFERENCES APPLICATION_USER  (ID))"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure (
+ id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ description VARCHAR(250) NOT NULL,
+sum DECIMAL NOT NULL ,
+ category VARCHAR(30) NOT NULL ,
+ date DATE NOT NULL
+application_user_id BIGINT,
+FOREIGN KEY (application_user_id) REFERENCES APPLICATION_USER  (ID)) [42001-224]
+2024-01-08 16:53:19.706654+01:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Błąd składniowy w wyrażeniu SQL "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000asum DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a[*]klucz BIGINT,\000d\000aFOREIGN KEY (KLUCZ) REFERENCES APPLICATION_USER  (ID))"; oczekiwano "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"
+Syntax error in SQL statement "CREATE TABLE IF NOT EXISTS expenditure (\000d\000a id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,\000d\000a description VARCHAR(250) NOT NULL,\000d\000asum DECIMAL NOT NULL ,\000d\000a category VARCHAR(30) NOT NULL ,\000d\000a date DATE NOT NULL\000d\000a[*]klucz BIGINT,\000d\000aFOREIGN KEY (KLUCZ) REFERENCES APPLICATION_USER  (ID))"; expected "DEFAULT, GENERATED, ON UPDATE, DEFAULT ON NULL, SEQUENCE, SELECTIVITY, COMMENT, CONSTRAINT, COMMENT, PRIMARY KEY, UNIQUE, NOT NULL, CHECK, REFERENCES, ,, )"; SQL statement:
+CREATE TABLE IF NOT EXISTS expenditure (
+ id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY ,
+ description VARCHAR(250) NOT NULL,
+sum DECIMAL NOT NULL ,
+ category VARCHAR(30) NOT NULL ,
+ date DATE NOT NULL
+klucz BIGINT,
+FOREIGN KEY (KLUCZ) REFERENCES APPLICATION_USER  (ID)) [42001-224]
