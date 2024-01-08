@@ -3,6 +3,7 @@ package com.example.manageyourexpenditures.user;
 import com.example.manageyourexpenditures.user.dto.UserDto;
 import com.example.manageyourexpenditures.user.dto.UserRegistrationDto;
 import lombok.AllArgsConstructor;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,6 +27,7 @@ public class UserService {
     }
 @Transactional
     public void register(UserRegistrationDto register) {
+
         User user = new User();
         user.setFirstName(register.getFirstName());
         user.setLastName(register.getLastName());
@@ -41,6 +43,11 @@ public class UserService {
         );
         userRepository.save(user);
 
+    }
+
+    public String showLoggedUsername(){
+         String loggedUserName = SecurityContextHolder.getContext().getAuthentication().getName();
+         return loggedUserName;
     }
 
 }
