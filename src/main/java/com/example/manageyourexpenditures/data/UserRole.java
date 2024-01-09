@@ -1,4 +1,4 @@
-package com.example.manageyourexpenditures.user;
+package com.example.manageyourexpenditures.data;
 
 import jakarta.persistence.*;
 import lombok.Getter;

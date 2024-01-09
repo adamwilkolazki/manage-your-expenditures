@@ -1,7 +1,10 @@
-package com.example.manageyourexpenditures.user;
+package com.example.manageyourexpenditures.service;
 
-import com.example.manageyourexpenditures.user.dto.UserDto;
-import com.example.manageyourexpenditures.user.dto.UserRegistrationDto;
+import com.example.manageyourexpenditures.data.*;
+import com.example.manageyourexpenditures.data.UserDto.UserDto;
+import com.example.manageyourexpenditures.data.UserDto.UserRegistrationDto;
+import com.example.manageyourexpenditures.repository.UserRepository;
+import com.example.manageyourexpenditures.repository.UserRoleRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -1,7 +1,7 @@
 package com.example.manageyourexpenditures.web;
 
-import com.example.manageyourexpenditures.user.UserService;
-import com.example.manageyourexpenditures.user.dto.UserRegistrationDto;
+import com.example.manageyourexpenditures.service.UserService;
+import com.example.manageyourexpenditures.data.UserDto.UserRegistrationDto;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

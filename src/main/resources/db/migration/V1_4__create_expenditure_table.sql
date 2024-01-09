@@ -4,5 +4,5 @@ CREATE TABLE IF NOT EXISTS expenditure (
                                            sum DECIMAL NOT NULL ,
                                            category VARCHAR(30) NOT NULL ,
                                            date DATE NOT NULL,
-                                           app_user_id BIGINT,
-                                           FOREIGN KEY (app_user_id) REFERENCES application_user  (id))
+                                           application_user_id BIGINT,
+                                           FOREIGN KEY (application_user_id) REFERENCES application_user (id))

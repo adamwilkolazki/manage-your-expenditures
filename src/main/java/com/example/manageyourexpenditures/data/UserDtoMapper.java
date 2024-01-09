@@ -1,6 +1,6 @@
-package com.example.manageyourexpenditures.user;
+package com.example.manageyourexpenditures.data;
 
-import com.example.manageyourexpenditures.user.dto.UserDto;
+import com.example.manageyourexpenditures.data.UserDto.UserDto;
 
 public class UserDtoMapper {
 

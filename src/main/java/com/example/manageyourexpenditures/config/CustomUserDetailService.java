@@ -1,15 +1,13 @@
 package com.example.manageyourexpenditures.config;
 
-import com.example.manageyourexpenditures.user.UserService;
-import com.example.manageyourexpenditures.user.dto.UserDto;
+import com.example.manageyourexpenditures.service.UserService;
+import com.example.manageyourexpenditures.data.UserDto.UserDto;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 @AllArgsConstructor

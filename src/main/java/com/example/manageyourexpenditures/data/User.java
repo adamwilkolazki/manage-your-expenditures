@@ -1,4 +1,6 @@
-package com.example.manageyourexpenditures.user;
+package com.example.manageyourexpenditures.data;
+
+
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -11,7 +13,7 @@ import java.util.List;
 @Table(name = "application_user")
 @Getter
 @Setter
-class User {
+public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,10 +21,11 @@ class User {
     private String lastName;
     private String email;
     private String password;
-    private BigDecimal accountBalance = BigDecimal.ZERO;
-    @OneToMany
-    @JoinColumn (name = "appUserId")
-    private List<Expenditure> expenditures;
+    private BigDecimal accountBalance;
+
+   @OneToMany(fetch = FetchType.EAGER)
+   @JoinColumn(name = "application_user_id",referencedColumnName = "id")
+   private List<Expenditure> expenditures;
     @ManyToOne()
     private UserRole role;
 }
