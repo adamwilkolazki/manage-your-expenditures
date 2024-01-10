@@ -1,8 +1,7 @@
 
-.container{
-    margin: 0 auto;
-    max-width: 400px;
-    margin-top: 10%;
+.container-fluid{
+
+
 }
 .login-form{
     display: flex;
@@ -15,3 +14,17 @@
     margin: 5px;
 
 }
+.row{
+
+
+
+}
+
+.card{
+    display: flex;
+}
+label{
+    display: block;
+}
+
+

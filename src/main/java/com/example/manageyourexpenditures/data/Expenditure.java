@@ -20,6 +20,7 @@ import java.time.LocalDate;
     private BigDecimal sum;
     @Enumerated(EnumType.STRING)
     private Category category;
+    private Long application_user_id;
 
     private LocalDate date;
 

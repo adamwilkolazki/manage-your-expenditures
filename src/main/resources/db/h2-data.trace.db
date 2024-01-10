@@ -421,3 +421,21 @@ select e1_0.application_user_id,e1_0.id,e1_0.category,e1_0.date,e1_0.description
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
+2024-01-10 13:50:22.979935+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
+The object is already closed [90007-224]
+2024-01-10 13:57:43.139808+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
+The object is already closed [90007-224]
+2024-01-10 14:00:57.743776+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
+The object is already closed [90007-224]
+2024-01-10 16:03:37.800688+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
+The object is already closed [90007-224]
+2024-01-10 16:29:30.011556+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
+The object is already closed [90007-224]
+2024-01-10 16:30:25.863301+01:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: Obiekt jest zamknięty
+The object is already closed [90007-224]

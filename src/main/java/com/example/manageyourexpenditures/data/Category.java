@@ -1,4 +1,4 @@
 package com.example.manageyourexpenditures.data;
- enum Category {
+public enum Category {
     SHOPPING,BILLS,ENTERTAINMENT,OTHER
 }
