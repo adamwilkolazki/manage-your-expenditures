@@ -1,4 +1,4 @@
-package com.example.manageyourexpenditures.data.ExpenditureDto;
+package com.example.manageyourexpenditures.data.dto.ExpenditureDto;
 
 
 import jakarta.persistence.EnumType;

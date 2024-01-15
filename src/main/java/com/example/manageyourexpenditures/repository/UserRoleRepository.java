@@ -1,6 +1,6 @@
 package com.example.manageyourexpenditures.repository;
 
-import com.example.manageyourexpenditures.data.UserRole;
+import com.example.manageyourexpenditures.data.model.UserRole;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.Optional;

@@ -1,4 +1,4 @@
-package com.example.manageyourexpenditures.data;
+package com.example.manageyourexpenditures.data.model;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -17,6 +17,7 @@ import java.time.LocalDate;
 
 
     private String description;
+    @Column( name = "sum",scale = 2)
     private BigDecimal sum;
     @Enumerated(EnumType.STRING)
     private Category category;

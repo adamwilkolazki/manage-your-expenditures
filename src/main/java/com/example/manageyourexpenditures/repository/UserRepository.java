@@ -1,6 +1,6 @@
 package com.example.manageyourexpenditures.repository;
 
-import com.example.manageyourexpenditures.data.User;
+import com.example.manageyourexpenditures.data.model.User;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

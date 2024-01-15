@@ -1,4 +1,4 @@
-package com.example.manageyourexpenditures.data.UserDto;
+package com.example.manageyourexpenditures.data.dto.UserDto;
 
 import lombok.Getter;
 import lombok.Setter;

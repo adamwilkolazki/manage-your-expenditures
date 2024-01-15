@@ -1,6 +1,7 @@
-package com.example.manageyourexpenditures.data;
+package com.example.manageyourexpenditures.data.dto.ExpenditureDto;
 
-import com.example.manageyourexpenditures.data.ExpenditureDto.ExpenditureDto;
+import com.example.manageyourexpenditures.data.dto.ExpenditureDto.ExpenditureDto;
+import com.example.manageyourexpenditures.data.model.Expenditure;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;

@@ -1,4 +1,4 @@
-package com.example.manageyourexpenditures.data;
+package com.example.manageyourexpenditures.data.model;
 
 
 

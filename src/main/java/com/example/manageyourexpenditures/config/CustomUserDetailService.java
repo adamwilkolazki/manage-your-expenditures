@@ -1,7 +1,7 @@
 package com.example.manageyourexpenditures.config;
 
 import com.example.manageyourexpenditures.service.UserService;
-import com.example.manageyourexpenditures.data.UserDto.UserDto;
+import com.example.manageyourexpenditures.data.dto.UserDto.UserDto;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;

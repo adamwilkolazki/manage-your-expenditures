@@ -1,7 +1,8 @@
 package com.example.manageyourexpenditures.service;
 
-import com.example.manageyourexpenditures.data.Expenditure;
-import com.example.manageyourexpenditures.data.User;
+import com.example.manageyourexpenditures.data.model.Category;
+import com.example.manageyourexpenditures.data.model.Expenditure;
+import com.example.manageyourexpenditures.data.model.User;
 import com.example.manageyourexpenditures.repository.ExpenditureRepository;
 import com.example.manageyourexpenditures.repository.UserRepository;
 import lombok.AllArgsConstructor;
@@ -9,6 +10,8 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -27,9 +30,30 @@ public class ExpenditureService {
         expenditureRepository.save(expenditure);
     }
 
+    @Transactional
+    public void deleteExpenditure(Long id){
+    expenditureRepository.findById(id).ifPresent(expenditureRepository::delete);
+    }
+
+    @Transactional
+    public void edit(Long id,String description,BigDecimal sum,Category category, LocalDate date){
+        Expenditure expenditure = expenditureRepository.findById(id).get();
+        expenditure.setDescription(description);
+        expenditure.setSum(sum);
+        expenditure.setCategory(category);
+        expenditure.setDate(date);
+
+    }
+
+
     public List<Expenditure> showAllExpenditures(){
      return expenditureRepository.findAll();
     }
+
+
+
+
+
 
 
 
