@@ -26,7 +26,7 @@ public class CustomUserDetailService implements UserDetailsService {
     }
 
     private UserDto findUser(String username){
-        return  userService.findUserByEmail(username).orElseThrow(()->new UsernameNotFoundException(String.format("Can't find user with email %s",username)));
+        return  userService.findUserDtoByEmail(username).orElseThrow(()->new UsernameNotFoundException(String.format("Can't find user with email %s",username)));
 
     }
 }

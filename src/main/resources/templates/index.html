@@ -16,153 +16,146 @@
 <body>
 <div class="container-fluid">
     <!-- --->
-  <div class="row">
-      <!-- --->
-      <div class="col-4">
-          <h1>PANEL UŻYTKOWNIKA</h1>
-          <p th:text="'Zalogowany jako ' + ${username}"></p>
-          <a href="#" th:href="@{/logout}"> Wyloguj się</a>
-      </div>
-      <!-- --->
-      <div class="col-8">
-          <!-- --->
-          <div class="row">
-              <!-- --->
-              <div class="col-4">
-                  <div class="card" >
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                      </div>
-                  </div>
-              </div>
-              <!-- --->
-              <div class="col-2">
-                  <div class="card" >
-                      <div class="card-body">
-                          <h5 class="card-title">Wydatki na zakupy </h5>
+    <div class="row">
+        <!-- --->
+        <div class="col-4">
+            <h1>PANEL UŻYTKOWNIKA</h1>
+            <p th:text="'Zalogowany jako ' + ${username}"></p>
+            <a href="#" th:href="@{/logout}"> Wyloguj się</a>
+        </div>
+        <!-- --->
+        <div class="col-8">
+            <!-- --->
+            <div class="row">
+                <!-- --->
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Stan konta</h5>
+                            <h1 th:text="${user.accountBalance}"></h1>
 
 
-                                          </div>
-                  </div>
-              </div>
-              <!-- --->
-              <div class="col-2">
-                  <div class="card" >
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                      </div>
-                  </div>
-              </div>
-              <!-- --->
-              <div class="col-2">
-                  <div class="card" >
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                      </div>
-                  </div>
-              </div>
-              <!-- --->
-              <div class="col-2">
-                  <div class="card" >
-                      <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                      </div>
-                  </div>
-              </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- --->
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Wydatki na zakupy </h5>
 
 
+                        </div>
+                    </div>
+                </div>
+                <!-- --->
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- --->
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- --->
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                                of the card's content.</p>
+
+                        </div>
+                    </div>
+                </div>
 
 
-          </div>
+            </div>
 
-          <!-- --->
-          <div class="row">
-              <div class="col">
-                  <h2>lista wydatkow</h2>
-                  <table>
-                      <thead>
-                      <tr>
-                          <td>Opis</td>
-                          <td>Kwota</td>
-                          <td>Kategoria</td>
-                          <td>Data</td>
-                      </tr>
-                      </thead>
-                      <tr th:each="explist: ${list}" th:object="${explist}">
-                          <td th:text="*{description}"></td>
-                          <td th:text="*{sum}"></td>
-                          <td th:text="*{category}"></td>
-                          <td th:text="*{date}"></td>
-                          <td><a th:href="@{/delete/id (id=*{id})}">Usuń</a></td>
-                          <td><a th:href="@{/edit/id (id=*{id})}">Edytuj</a> </td>
-                      </tr>
-                  </table>
-                      </div>
-              <div class="col">
-                  <h2> FORMULARZ </h2>
-                  <form method="post" action="/addexpenditure" th:object="${expenditure}">
-                      <label> Opis:
-                          <input th:field="*{description}" type="text">
-                      </label>
-                      <label> Kwota:
-                          <input th:field="*{sum}" type="number" step="0.1">
-                      </label>
-                      <label> Kategoria:
-                          <select th:field="*{category}">
-                              <option th:text="RACHUNKI" th:value="BILLS"></option>
-                              <option th:text="ROZRYWKA" th:value="ENTERTAINMENT"></option>
-                              <option th:text="ZAKUPY" th:value="SHOPPING"></option>
-                              <option th:text="INNE" th:value="OTHER"></option>
+            <!-- --->
+            <div class="row">
+                <div class="col">
+                    <h2>lista wydatkow</h2>
+                    <table>
+                        <thead>
+                        <tr>
+                            <td>Opis</td>
+                            <td>Kwota</td>
+                            <td>Kategoria</td>
+                            <td>Data</td>
+                        </tr>
+                        </thead>
+                        <tr th:each="explist: ${list}" th:object="${explist}">
+                            <td th:text="*{description}"></td>
+                            <td th:text="*{sum}"></td>
+                            <td th:text="*{category}"></td>
+                            <td th:text="*{date}"></td>
+                            <td><a th:href="@{/delete/id (id=*{id})}">Usuń</a></td>
+                            <td><a th:href="@{/edit/id (id=*{id})}">Edytuj</a></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col">
+                    <h2> FORMULARZ </h2>
+                    <form method="post" action="/addexpenditure" th:object="${expenditure}">
+                        <label> Opis:
+                            <input th:field="*{description}" type="text">
+                        </label>
+                        <label> Kwota:
+                            <input th:field="*{sum}" type="number" step="0.1">
+                        </label>
+                        <label> Kategoria:
+                            <select th:field="*{category}">
+                                <option th:text="RACHUNKI" th:value="BILLS"></option>
+                                <option th:text="ROZRYWKA" th:value="ENTERTAINMENT"></option>
+                                <option th:text="ZAKUPY" th:value="SHOPPING"></option>
+                                <option th:text="INNE" th:value="OTHER"></option>
 
-                          </select>
-
-
-                      </label>
-                      <label> Data:
-                          <input th:field="*{date}" type="date">
-                      </label>
-                      <button type="submit">Dodaj</button>
-                  </form>
-              </div>
-
-                  </div>
-
-              </div>
+                            </select>
 
 
+                        </label>
+                        <label> Data:
+                            <input th:field="*{date}" type="date">
+                        </label>
+                        <button type="submit">Dodaj</button>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
 
 
-          </div>
-          <!-- --->
-
-
-
-      </div>
-      <!-- --->
-
-
-  </div>
+    </div>
     <!-- --->
 
 
-
+</div>
+<!-- --->
 
 
 </div>
+<!-- --->
 
 
-
+</div>
 
 
 </body>

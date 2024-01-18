@@ -15,4 +15,6 @@ public interface ExpenditureRepository extends ListCrudRepository<Expenditure,Lo
 List<Expenditure> findAllByCategory(Category category);
 
 
+
+
 }

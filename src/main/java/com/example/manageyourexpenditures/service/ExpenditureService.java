@@ -50,6 +50,26 @@ public class ExpenditureService {
      return expenditureRepository.findAll();
     }
 
+    public List<Expenditure> showExpendituresByCategory(Category category){
+    return expenditureRepository.findAllByCategory(category);
+    };
+
+
+public BigDecimal sumExpensesByCategory(Category category){
+   return showExpendituresByCategory(category)
+            .stream()
+            .map(Expenditure::getSum)
+            .reduce(BigDecimal.ZERO,BigDecimal::add);
+}
+
+public BigDecimal sumAllExpenditures(){
+    return expenditureRepository.findAll().stream()
+            .map(Expenditure::getSum)
+            .reduce(BigDecimal.ZERO,BigDecimal::add);
+
+}
+
+
 
 
 

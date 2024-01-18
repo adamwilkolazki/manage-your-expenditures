@@ -3,6 +3,7 @@ package com.example.manageyourexpenditures.service;
 import com.example.manageyourexpenditures.data.dto.UserDto.UserDto;
 import com.example.manageyourexpenditures.data.dto.UserDto.UserDtoMapper;
 import com.example.manageyourexpenditures.data.dto.UserDto.UserRegistrationDto;
+import com.example.manageyourexpenditures.data.model.Expenditure;
 import com.example.manageyourexpenditures.data.model.User;
 import com.example.manageyourexpenditures.data.model.UserRole;
 import com.example.manageyourexpenditures.repository.ExpenditureRepository;
@@ -25,15 +26,22 @@ public class UserService {
     private final UserRepository userRepository;
     private final UserRoleRepository userRoleRepository;
     private final PasswordEncoder passwordEncoder;
-    private final ExpenditureRepository expenditureRepository;
+    private final ExpenditureService expenditureService;
+
     private final static String USER_ROLE = "USER";
 
 
-    public Optional<UserDto> findUserByEmail(String email) {
+    public Optional<UserDto> findUserDtoByEmail(String email) {
         return userRepository.findUserByEmail(email)
                 .map(UserDtoMapper::map);
     }
-@Transactional
+
+    public Optional<User> findUserByEmail(String email) {
+        return userRepository.findUserByEmail(email);
+
+    }
+
+    @Transactional
     public void register(UserRegistrationDto register) {
 
         User user = new User();
@@ -54,8 +62,8 @@ public class UserService {
 
     }
 
-    public String showLoggedUsername(){
-         return  SecurityContextHolder.getContext().getAuthentication().getName();
+    public String showLoggedUsername() {
+        return SecurityContextHolder.getContext().getAuthentication().getName();
 
     }
 
@@ -63,3 +71,9 @@ public class UserService {
 
 
 }
+
+
+
+
+
+

@@ -1,7 +1,9 @@
 package com.example.manageyourexpenditures.web;
 
+
 import com.example.manageyourexpenditures.data.model.Category;
 import com.example.manageyourexpenditures.data.model.Expenditure;
+import com.example.manageyourexpenditures.data.model.User;
 import com.example.manageyourexpenditures.service.ExpenditureService;
 import com.example.manageyourexpenditures.service.UserService;
 import lombok.AllArgsConstructor;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Optional;
 
 @Controller
 @AllArgsConstructor
@@ -24,10 +27,17 @@ public class HomeController {
     public String homeMethod(Model model) {
         String username = userService.showLoggedUsername();
         List<Expenditure> expendituresList = expenditureService.showAllExpenditures();
+        User user = userService.findUserByEmail(username).get();
+
 
         model.addAttribute("username", username);
         model.addAttribute("expenditure", new Expenditure());
         model.addAttribute("list", expendituresList);
+        model.addAttribute("user",user);
+
+
+
+
 
 
         return "index";
@@ -51,6 +61,7 @@ public class HomeController {
     }
 
 
+    }
 
 
 
@@ -59,4 +70,9 @@ public class HomeController {
 
 
 
-}
+
+
+
+
+
+
