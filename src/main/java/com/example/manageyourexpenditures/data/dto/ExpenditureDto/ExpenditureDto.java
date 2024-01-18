@@ -13,6 +13,7 @@ import java.time.LocalDate;
 @Setter
 @AllArgsConstructor
 public class ExpenditureDto {
+    private Long id;
 
     private String description;
     private BigDecimal sum;

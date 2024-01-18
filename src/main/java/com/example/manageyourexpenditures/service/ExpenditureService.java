@@ -1,5 +1,7 @@
 package com.example.manageyourexpenditures.service;
 
+import com.example.manageyourexpenditures.data.dto.ExpenditureDto.ExpenditureDto;
+import com.example.manageyourexpenditures.data.dto.ExpenditureDto.ExpenditureDtoMapper;
 import com.example.manageyourexpenditures.data.model.Category;
 import com.example.manageyourexpenditures.data.model.Expenditure;
 import com.example.manageyourexpenditures.data.model.User;
@@ -12,6 +14,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.time.Month;
 import java.util.List;
 
 @Service
@@ -50,24 +53,31 @@ public class ExpenditureService {
      return expenditureRepository.findAll();
     }
 
-    public List<Expenditure> showExpendituresByCategory(Category category){
-    return expenditureRepository.findAllByCategory(category);
-    };
+    public List<ExpenditureDto> showThisMonthExpenditure(){
+        Month actualMonth = LocalDate.now().getMonth();
+      return   showAllExpenditures().stream()
+              .map(ExpenditureDtoMapper::map)
+                .filter(expenditure -> (expenditure.getDate().getMonth()).equals(actualMonth))
+                .toList();
+    }
+
+
 
 
 public BigDecimal sumExpensesByCategory(Category category){
-   return showExpendituresByCategory(category)
-            .stream()
-            .map(Expenditure::getSum)
-            .reduce(BigDecimal.ZERO,BigDecimal::add);
+ return showThisMonthExpenditure().stream()
+          .filter(e->e.getCategory().equals(category.name()))
+          .map(ExpenditureDto::getSum)
+          .reduce(BigDecimal.ZERO,BigDecimal::add);
 }
 
-public BigDecimal sumAllExpenditures(){
-    return expenditureRepository.findAll().stream()
-            .map(Expenditure::getSum)
+public BigDecimal sumMonthlyExpenditures(){
+    return showThisMonthExpenditure().stream()
+            .map(ExpenditureDto::getSum)
             .reduce(BigDecimal.ZERO,BigDecimal::add);
 
 }
+
 
 
 

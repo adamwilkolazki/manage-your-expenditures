@@ -31,18 +31,9 @@
                 <div class="col-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Stan konta</h5>
-                            <h1 th:text="${user.accountBalance}"></h1>
+                           <h2> W tym miesiącu wydałeś łącznie:</h2>
+                            <h2   th:text="${monthlyExpenditure} + ' zł'">/h2>
 
-
-                        </div>
-                    </div>
-                </div>
-                <!-- --->
-                <div class="col-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Wydatki na zakupy </h5>
 
 
                         </div>
@@ -52,22 +43,9 @@
                 <div class="col-2">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h2>Zakupy</h2>
+                            <h2 th:text="${shopping} + ' zł'"></h2>
 
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- --->
-                <div class="col-2">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
 
                         </div>
                     </div>
@@ -76,10 +54,31 @@
                 <div class="col-2">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h2>Rachunki  </i></h2>
+                            <h2 th:text="${bills} + ' zł'"></h2>
 
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                of the card's content.</p>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- --->
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Rozrywka
+
+                            <h2 th:text="${entertainment} + ' zł'"></h2>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- --->
+                <div class="col-2">
+                    <div class="card">
+                        <div class="card-body">
+                            <h2>Inne wydatki</h2>
+
+                            <h2 th:text="${other}"></h2>
 
                         </div>
                     </div>

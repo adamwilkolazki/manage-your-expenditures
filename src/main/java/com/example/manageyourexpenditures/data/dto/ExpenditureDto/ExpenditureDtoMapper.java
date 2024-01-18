@@ -8,11 +8,12 @@ import java.time.LocalDate;
 
 public class ExpenditureDtoMapper {
 
-    public ExpenditureDto map(Expenditure expenditure){
+    public static ExpenditureDto map(Expenditure expenditure){
+        Long id = expenditure.getId();
         String description = expenditure.getDescription();
         BigDecimal sum = expenditure.getSum();
         String category = expenditure.getCategory().name();
         LocalDate date = expenditure.getDate();
-        return new ExpenditureDto(description,sum,category,date);
+        return new ExpenditureDto(id,description,sum,category,date);
     }
 }

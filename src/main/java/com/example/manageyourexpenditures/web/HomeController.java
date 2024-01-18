@@ -1,6 +1,7 @@
 package com.example.manageyourexpenditures.web;
 
 
+import com.example.manageyourexpenditures.data.dto.ExpenditureDto.ExpenditureDto;
 import com.example.manageyourexpenditures.data.model.Category;
 import com.example.manageyourexpenditures.data.model.Expenditure;
 import com.example.manageyourexpenditures.data.model.User;
@@ -26,14 +27,19 @@ public class HomeController {
     @GetMapping("/")
     public String homeMethod(Model model) {
         String username = userService.showLoggedUsername();
-        List<Expenditure> expendituresList = expenditureService.showAllExpenditures();
+        List<ExpenditureDto> expenditureList = expenditureService.showThisMonthExpenditure();
         User user = userService.findUserByEmail(username).get();
 
 
         model.addAttribute("username", username);
         model.addAttribute("expenditure", new Expenditure());
-        model.addAttribute("list", expendituresList);
+        model.addAttribute("list", expenditureList);
         model.addAttribute("user",user);
+        model.addAttribute("monthlyExpenditure",expenditureService.sumMonthlyExpenditures());
+        model.addAttribute("bills", expenditureService.sumExpensesByCategory(Category.BILLS));
+        model.addAttribute("shopping", expenditureService.sumExpensesByCategory(Category.SHOPPING));
+        model.addAttribute("entertainment", expenditureService.sumExpensesByCategory(Category.ENTERTAINMENT));
+        model.addAttribute("other", expenditureService.sumExpensesByCategory(Category.OTHER));
 
 
 
