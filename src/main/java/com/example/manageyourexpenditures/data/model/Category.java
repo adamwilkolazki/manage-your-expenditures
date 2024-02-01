@@ -1,4 +1,9 @@
 package com.example.manageyourexpenditures.data.model;
 public enum Category {
-    SHOPPING,BILLS,ENTERTAINMENT,OTHER
-}
+
+
+    SHOPPING(),BILLS(),ENTERTAINMENT(),OTHER();
+
+
+    }
+

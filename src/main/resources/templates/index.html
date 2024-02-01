@@ -19,8 +19,11 @@
     <div class="row">
         <!-- --->
         <div class="col-4">
-            <h1>PANEL UŻYTKOWNIKA</h1>
+
+
+            <img src="/images/blank-profile-pic.png" width="200" height="200">
             <p th:text="'Zalogowany jako ' + ${username}"></p>
+            <a  href="#" th:href="@{/editpass}">Zmień hasło </a>
             <a href="#" th:href="@{/logout}"> Wyloguj się</a>
         </div>
         <!-- --->
@@ -32,7 +35,7 @@
                     <div class="card">
                         <div class="card-body">
                            <h2> W tym miesiącu wydałeś łącznie:</h2>
-                            <h2   th:text="${monthlyExpenditure} + ' zł'">/h2>
+                            <h2   th:text="${monthlyExpenditure} + ' zł'"></h2>
 
 
 
@@ -90,7 +93,7 @@
             <!-- --->
             <div class="row">
                 <div class="col">
-                    <h2>lista wydatkow</h2>
+                    <h2>Lista wydatków w tym miesiącu:</h2>
                     <table>
                         <thead>
                         <tr>
@@ -109,6 +112,7 @@
                             <td><a th:href="@{/edit/id (id=*{id})}">Edytuj</a></td>
                         </tr>
                     </table>
+                  <a href="#" th:href="@{/list}">Pełna lista wydatków </a>
                 </div>
                 <div class="col">
                     <h2> FORMULARZ </h2>

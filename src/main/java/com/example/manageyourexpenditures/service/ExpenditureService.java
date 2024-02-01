@@ -53,6 +53,14 @@ public class ExpenditureService {
      return expenditureRepository.findAll();
     }
 
+public List<Expenditure> filterExpenditures(String keyword){
+    if(keyword!=null) {
+    return expenditureRepository.search(keyword);
+
+    }
+    return expenditureRepository.findAll();
+    }
+
     public List<ExpenditureDto> showThisMonthExpenditure(){
         Month actualMonth = LocalDate.now().getMonth();
       return   showAllExpenditures().stream()

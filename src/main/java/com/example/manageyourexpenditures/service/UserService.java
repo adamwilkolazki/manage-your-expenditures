@@ -26,7 +26,7 @@ public class UserService {
     private final UserRepository userRepository;
     private final UserRoleRepository userRoleRepository;
     private final PasswordEncoder passwordEncoder;
-    private final ExpenditureService expenditureService;
+
 
     private final static String USER_ROLE = "USER";
 
@@ -67,7 +67,13 @@ public class UserService {
 
     }
 
-
+    @Transactional
+    public void editUserPassword(String newPassword) {
+        String currentUsername = showLoggedUsername();
+        User user = userRepository.findUserByEmail(currentUsername).orElseThrow();
+        String hashedPassword = passwordEncoder.encode(newPassword);
+        user.setPassword(hashedPassword);
+    }
 
 
 }
