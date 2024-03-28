@@ -9,34 +9,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
           integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
           crossorigin="anonymous" referrerpolicy="no-referrer">
-    <link rel="stylesheet" href="/main.css" th:href="@{/main.css}">
+    <link rel="stylesheet" href="/register.css" th:href="@{/register.css}">
     <title>Edit Expenditure</title>
 </head>
 <body>
-<form action="/edit" method="post" th:object="${expenditure}">
-    <label> Opis
-        <input type="text" th:field="*{description}" th:value="*{description}">
-    </label>
-    <input type="hidden" th:field="*{id}" th:value="*{id}">
-    <label> Kwota:
-        <input th:field="*{sum}" th:value="*{sum}" type="number"step="0.01">
-    </label>
+<form  class="edit-form" action="/edit" method="post" th:object="${expenditure}">
+    <div class="form-title">Edytuj wydatek</div>
+    <div class="form-item">
+        <label class="form-label">
+            Opis
+        </label>
 
-    <label> Kategoria:
-        <select th:field="*{category}">
+        <input class="form-input" type="text" th:field="*{description}" th:value="*{description}">
+    </div>
+
+    <input type="hidden" th:field="*{id}" th:value="*{id}">
+
+    <div class="form-item">
+        <label class="form-label">
+            Kwota
+        </label>
+
+        <input class="form-input" th:field="*{sum}" th:value="*{sum}" type="number" step="0.01">
+    </div>
+
+    <div class="form-item">
+        <label class="form-label">
+            Kategoria
+        </label>
+        <select class="form-select" th:field="*{category}">
             <option th:text="RACHUNKI" th:value="BILLS"></option>
             <option th:text="ROZRYWKA" th:value="ENTERTAINMENT"></option>
             <option th:text="ZAKUPY" th:value="SHOPPING"></option>
             <option th:text="INNE" th:value="OTHER"></option>
+
         </select>
-    </label>
-    <label> Data:
-        <input th:field="*{date} " th:value="*{date}" type="date">
-    </label>
-    </label>
-    <button type="submit"> Zapisz</button>
+    </div>
+        <div class="form-item">
+            <label class="form-label">
+                Data
+            </label>
+            <input class="form-input" th:field="*{date}" type="date" >
+        </div>
+
+        <div class="form-item">
+            <button  class="form-button" type="submit">Zapisz</button>
+        </div>
+
 
 </form>
+
+
+
+
+
+
+
+
+
 
 </body>
 </html>

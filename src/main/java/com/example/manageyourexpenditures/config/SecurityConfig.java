@@ -20,7 +20,7 @@ public class SecurityConfig {
                     .requestMatchers("login","/register","/confirmation").permitAll()
                     .requestMatchers(PathRequest.toH2Console()).permitAll()
 
-                    .requestMatchers("/main.css").permitAll()
+                    .requestMatchers("/main.css","register.css","list.css").permitAll()
 
 
                     .anyRequest().authenticated());

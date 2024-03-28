@@ -9,39 +9,47 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="/main.css" th:href="@{/main.css}">
+  <link rel="stylesheet" href="/list.css" th:href="@{/list.css}">
   <title>Expenditure list</title>
 
 
 </head>
 
 <body>
-<form th:action="@{/list}" >
-  <input type="text" name="keyword"  th:value="${keyword}" required/>
-  <input type="submit" value="Szukaj">
+
+
+
+<div class="card">
+
+  <form class="find-form" th:action="@{/list}" >
+    <input type="text" name="keyword"  th:value="${keyword}" required/>
+    <input   type="submit" value="Szukaj">
+
 
 </form>
-<table>
-  <thead>
-  <tr>
-    <td>Opis</td>
-    <td>Kwota</td>
-    <td>Kategoria</td>
-    <td>Data</td>
-  </tr>
-  </thead>
-  <tr th:each="explist: ${expenditures}" th:object="${explist}">
-    <td th:text="*{description}"></td>
-    <td th:text="*{sum}"></td>
-    <td th:text="*{category}"></td>
-    <td th:text="*{date}"></td>
-    <td><a th:href="@{/delete/id (id=*{id})}">Usuń</a></td>
-    <td><a th:href="@{/edit/id (id=*{id})}">Edytuj</a></td>
-  </tr>
-</table>
+  <table class="content-table">
+    <thead>
+    <tr>
+      <td>Opis</td>
+      <td>Kwota</td>
+      <td>Kategoria</td>
+      <td>Data</td>
+      <td></td>
+      <td></td>
+    </tr>
+    </thead>
+    <tr th:each="explist: ${expenditures}" th:object="${explist}">
+      <td th:text="*{description}"></td>
+      <td th:text="*{sum}"></td>
+      <td th:text="*{category}"></td>
+      <td th:text="*{date}"></td>
+      <td><a th:href="@{/delete/id (id=*{id})}">Usuń</a></td>
+      <td><a th:href="@{/edit/id (id=*{id})}">Edytuj</a></td>
+    </tr>
+  </table>
+  <a th:href="@{/}">Powrót na stronę główną</a>
 
-<a th:href="@{/}">Powrót na stronę główną</a>
-
+</div>
 
 
 
